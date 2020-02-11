@@ -13,7 +13,6 @@ public class OculusGrab : MonoBehaviour
 
     public GameObject objectInHand;
 
-    public TMPro.TextMeshProUGUI debug;
 
 
     // trigger functions after adding trigger zones to controllers and adding script to controllers
@@ -21,7 +20,7 @@ public class OculusGrab : MonoBehaviour
     public void OnTriggerEnter(Collider other) //picking up objects with rigidbodies
 
     {
-        debug.text = "trigger enter";
+        //debug.text = "trigger enter";
 
         if (other.gameObject.GetComponent<Rigidbody>())
 
@@ -55,7 +54,7 @@ public class OculusGrab : MonoBehaviour
 
         if (Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") > 0.2f && CollidingObject)
         {
-            debug.text = "primary trigger grab";
+            //debug.text = "primary trigger grab";
 
             GrabObject();
 
@@ -63,7 +62,7 @@ public class OculusGrab : MonoBehaviour
 
         if (Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") < 0.2f && objectInHand)
         {
-            debug.text = "primary trigger release";
+            //debug.text = "primary trigger release";
 
             ReleaseObject();
 
