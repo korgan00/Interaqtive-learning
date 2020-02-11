@@ -18,5 +18,11 @@ public class Measurer : MonoBehaviour {
         return 1/(Mathf.PI * 0.32) * 1/((freq*20)^2 + 1);
     }
 
+    public float GetRabiValueAt(float time)
+    {
+        // TODO: We use an aproximation of the sin curve. This should be reviewed by a researcher
+        // https://qiskit.org/textbook/ch-quantum-hardware/calibrating-qubits-openpulse.html#A.-Calibrating-$\pi$-pulses-using-a-Rabi-experiment-
+        return 3.5 * Mathf.Sin(time*6)
+    }
 
 }
