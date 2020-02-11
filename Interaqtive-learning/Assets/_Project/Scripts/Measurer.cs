@@ -15,9 +15,8 @@ public class Measurer : MonoBehaviour {
         // https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.LorentzianModel
         // TODO: We use an aproximation. This should be reviewed by a researcher
 
-        public float frequencyPeak = 1/(Mathf.PI * 0.32) * 1/((freq*20)^2 + 1)
-        
-        return frequencyPeak;
+        return 1/(Mathf.PI * 0.32) * 1/((freq*20)^2 + 1);
     }
+
 
 }
